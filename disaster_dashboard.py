@@ -6,7 +6,9 @@ import plotly.graph_objects as go
 # ----------------------------------------------------------------
 # Load correlation matrix
 # ----------------------------------------------------------------
-FILE_PATH = "/home/adminvarshitha/bigdata/projects/output_disasterAI/correlation_matrix.csv"
+import os
+FILE_PATH = os.path.join(os.path.dirname(__file__), "correlation_matrix.csv")
+
 corr_df = pd.read_csv(FILE_PATH, index_col=0)
 
 # ----------------------------------------------------------------
@@ -62,5 +64,4 @@ def update_metric_chart(selected_metric):
     return fig, insight
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8050))
-    app.run(host="0.0.0.0", port=port, debug=False)
+        app.run(debug=True)
