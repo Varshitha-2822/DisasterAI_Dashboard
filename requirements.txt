@@ -1,11 +1,8 @@
+streamlit
 dash
-dash-bootstrap-components
 pandas
+plotly
 numpy
 scikit-learn
 matplotlib
-seaborn
-pyspark
-
-
-
+flask
